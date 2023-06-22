@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Finance</title>
+  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Control Finance - Seu controle financeiro" />
+  <link rel="stylesheet" href="./src/styles/reset.css" />
+  <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+  <link rel="stylesheet" href="./src/styles/header.css" />
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/modal.css" />
+  <script defer src="./src/scripts/valuesData.js"></script>
+  <script defer src="./src/scripts/index.js"></script>
+  <script defer src="./src/scripts/modal.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1> <span class="logo"> Control</span> Finance</h1>
+    <button class="insert-value">Registrar novo valor</button>
+  </header>
+  <main id="app">
+    <section class="financeResume__container">
+      <h2 class="title-financeResume__conteiner">Resumo Financeiro</hr>
+        <div class="button_container">
+          <button class="button-all">Todos</button>
+          <button class="button-open">Entradas</button>
+          <button class="button-end">Saidas</button>
+        </div>
+    </section>
+    <section class="valor__container">
+      <h2>Soma dos valores</h2>
+      <p class="valor-text">200,00</p>
+    </section>
+    <section class="table__container">
+      <ul></ul>
+    </section>
+  </main>
+  <dialog class="modal__controller">
+    <div class="modal__container">
+      <div class="modal__topo">
+        <h2 class="title-modal">Registro de valor</h2>
+        <button class="closeButtunModal">X</button>
+      </div>
+      <h3 class="title-h3-modal">Digite o valor e em seguida aperte no botão referente ao tipo do valor </h3>
+      <h3 class="title-h3-modal-valor">Valor:</h3>
+      <form>
+        <div class="select__container">
+          <input  name="valor" id="input_valor" type="number" placeholder="R$ 00,00" />
+          <h2 class="h2-modal">Tipo de valor:</h2>
+          <div class="input_finance">
+            <input type="radio" id="open" name="tipo" value="entrada" class="input_finance" checked>
+            <label for="open">Entrada</label>
+            
+            <input type="radio" id="close" name="tipo" value="saida" class="input_finance">
+            <label for="close">Saída</label>
+            
+          </div>
+        </div>
+        <div class="button-modal__container">
+          <button class="button-adiconar__modal" type="submit" id="btnSubmit">Adicionar</button>
+          <button class="button-cancelar__modal" type="">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</body>
+
+</html>
